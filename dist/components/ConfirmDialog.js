@@ -1,0 +1,7 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { X } from 'lucide-react';
+export const ConfirmDialog = ({ isOpen, title, message, confirmText = 'Evet, Sil', cancelText = 'İptal', onConfirm, onCancel }) => {
+    if (!isOpen)
+        return null;
+    return (_jsx("div", { className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50", children: _jsxs("div", { className: "bg-white rounded-lg shadow-xl w-full max-w-md overflow-hidden", children: [_jsxs("div", { className: "flex items-center justify-between p-4 border-b", children: [_jsx("h3", { className: "text-lg font-semibold text-gray-900", children: title }), _jsx("button", { onClick: onCancel, className: "text-gray-400 hover:text-gray-500 focus:outline-none", children: _jsx(X, { className: "w-5 h-5" }) })] }), _jsx("div", { className: "p-6", children: _jsx("p", { className: "text-gray-600", children: message }) }), _jsxs("div", { className: "flex justify-end gap-3 p-4 bg-gray-50", children: [_jsx("button", { onClick: onCancel, className: "px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500", children: cancelText }), _jsx("button", { onClick: onConfirm, className: "px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500", children: confirmText })] })] }) }));
+};
